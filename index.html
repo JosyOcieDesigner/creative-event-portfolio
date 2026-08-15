@@ -3,90 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cek Artis | Creative Arts Innovations — Creative Event Portfolio" />
-  <title>Cek Artis | Creative Arts Innovations — Creative Event Portfolio</title>
+  <meta name="description" content="Cek Artis | Creative Arts Innovations — Creative Event & Experience Portfolio" />
+  <title>Cek Artis | Creative Arts Innovations</title>
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="nav">
-    <div class="brand">CEK ARTIS | CREATIVE ARTS INNOVATIONS</div>
+    <a class="brand" href="#home" aria-label="Cek Artis home">
+      <img src="cek-artis-logo.png" alt="Cek Artis">
+    </a>
     <nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">What We Do</a>
+      <a href="#work">Portfolio</a>
+      <a href="#contact">Contact Us</a>
     </nav>
+    <a class="nav-cta" href="#contact">Let’s Talk ↗</a>
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">CREATIVE EVENT & EXPERIENCE</p>
-      <h1>Ideas brought to life<br>through events, stories & experiences.</h1>
-      <p class="hero-copy">
-        Selected creative event work, campaign executions, live experiences, and video documentation.
-      </p>
+    <section class="hero" id="home">
+      <div class="hero-copy-wrap">
+        <p class="kicker">✦ CREATIVE EVENT & EXPERIENCE AGENCY</p>
+        <h1>WE CREATE<br><span>EXPERIENCES</span></h1>
+        <h2>THAT CONNECT, INSPIRE & LEAVE A LASTING IMPACT.</h2>
+        <p class="hero-copy">Cek Artis blends strategy, creative ideas, storytelling, and production execution to turn concepts into memorable brand experiences.</p>
+        <a class="button" href="#work">VIEW OUR WORK <b>→</b></a>
+      </div>
+      <div class="hero-visual">
+        <div class="outline-word">CREATIVE<br>AGENCY</div>
+        <img src="project-01.jpg" alt="Cek Artis creative event work" />
+        <div class="hero-badge"><strong>13</strong><span>SELECTED<br>EVENT FILMS</span></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div>BRANDING ✦ CREATIVE DIRECTION ✦ EVENT EXPERIENCE ✦ CAMPAIGN ✦ CONTENT ✦ PRODUCTION ✦ BRAND ACTIVATION ✦</div>
+    </div>
+
+    <section class="about" id="about">
+      <div class="about-copy">
+        <p class="kicker">WHO WE ARE</p>
+        <h2>CREATIVITY<br>MEETS STRATEGY.</h2>
+        <p>We build creative experiences from idea to execution—connecting brand objectives with visual storytelling, event production, campaigns, and audience engagement.</p>
+        <div class="mini-points"><span>✹ END-TO-END CREATIVE</span><span>✦ EXPERIENCE-LED THINKING</span></div>
+      </div>
+      <div class="about-image"><img src="project-04.jpg" alt="Live event production by Cek Artis"></div>
+      <div class="about-cards">
+        <article><b>△</b><div><h3>Brand Building & Strategy</h3><p>Creative concepts, positioning, presentation narratives, and campaign direction.</p></div></article>
+        <article><b>◉</b><div><h3>Creative Digital Solution</h3><p>Content, visual communication, digital activation, and experience-led ideas.</p></div></article>
+        <article><b>◁</b><div><h3>Event & Campaign Production</h3><p>From planning and creative direction through execution and documentation.</p></div></article>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="services-title"><p class="kicker">WHAT WE DO</p><h2>END-TO-END<br>CREATIVE SERVICES</h2></div>
+      <div class="service-list">
+        <span>BRANDING</span><span>CREATIVE DIRECTION</span><span>EVENT PRODUCTION</span><span>BRAND ACTIVATION</span><span>CONTENT CREATION</span><span>CAMPAIGN</span>
+      </div>
     </section>
 
     <section class="featured" id="work">
       <div class="section-head">
-        <div>
-          <p class="eyebrow">FEATURED PROJECT</p>
-          <h2>Selected Event Film</h2>
-        </div>
-        <span>01</span>
+        <div><p class="kicker">FEATURED PROJECT</p><h2>SELECTED EVENT FILM</h2></div><span>01</span>
       </div>
-
       <div class="video-shell featured-video">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/p5H_neI8nSA?rel=0&modestbranding=1"
-          title="Featured Creative Event Video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/p5H_neI8nSA?rel=0&modestbranding=1" title="Featured Creative Event Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-
-      <div class="meta">
-        <div>
-          <h3>Creative Event Project</h3>
-          <p>Creative Direction • Event Experience • Production</p>
-        </div>
-        <a href="https://youtu.be/p5H_neI8nSA" target="_blank" rel="noopener">Watch on YouTube ↗</a>
-      </div>
+      <div class="meta"><div><h3>Creative Event Project</h3><p>Creative Direction • Event Experience • Production</p></div></div>
     </section>
 
     <section class="gallery">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">SELECTED WORK</p>
-          <h2>Selected Event Films</h2>
-        </div>
-        <span>02–13</span>
-      </div>
-
+      <div class="section-head"><div><p class="kicker">OUR PORTFOLIO</p><h2>SELECTED WORKS</h2></div><span>02—13</span></div>
       <div class="grid" id="videoGrid"></div>
     </section>
 
-    <section class="about" id="about">
-      <p class="eyebrow">ABOUT</p>
-      <div class="about-grid">
-        <h2>Creative thinking.<br>Production mindset.<br>End-to-end execution.</h2>
-        <p>
-          Cek Artis | Creative Arts Innovations develops event concepts, campaign ideas, visual direction,
-          presentation narratives, and production experiences from initial concept through execution.
-        </p>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <p class="eyebrow">LET'S WORK TOGETHER</p>
-      <h2>Have a project in mind?</h2>
-      <p>Contact details can be added here later: email, WhatsApp, LinkedIn, or Upwork.</p>
+    <section class="cta" id="contact">
+      <div><p class="kicker">READY TO START?</p><h2>YOUR NEXT PROJECT<br>STARTS WITH AN IDEA.</h2></div>
+      <a class="button button-dark" href="#home">LET’S WORK TOGETHER <b>→</b></a>
     </section>
   </main>
 
   <footer>
-    <span>© 2026 Cek Artis | Creative Arts Innovations</span>
-    <span>Creative Event Portfolio</span>
+    <div class="footer-brand"><img src="cek-artis-logo.png" alt="Cek Artis"></div>
+    <p>Creative Arts Innovations<br>Creative Event & Experience Portfolio</p>
+    <div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Portfolio</a></div>
+    <small>© 2026 Cek Artis. All rights reserved.</small>
   </footer>
 
   <script src="script.js"></script>

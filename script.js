@@ -20,23 +20,18 @@ const grid = document.getElementById("videoGrid");
 videos.forEach((video, index) => {
   const card = document.createElement("article");
   card.className = "card";
-
   const thumbWrap = document.createElement("button");
   thumbWrap.className = "thumb";
   thumbWrap.type = "button";
   thumbWrap.setAttribute("aria-label", `Play ${video.title}`);
-
   const img = document.createElement("img");
-  img.src = `${BASE}${video.thumbnail}?v=6`;
+  img.src = `${BASE}${video.thumbnail}?v=7`;
   img.alt = video.title;
-
   const play = document.createElement("div");
   play.className = "play";
   play.textContent = "▶";
-
   thumbWrap.appendChild(img);
   thumbWrap.appendChild(play);
-
   thumbWrap.addEventListener("click", () => {
     const iframe = document.createElement("iframe");
     iframe.src = `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1`;
@@ -47,21 +42,12 @@ videos.forEach((video, index) => {
     iframe.style.height = "100%";
     iframe.style.border = "0";
     iframe.style.display = "block";
-
     thumbWrap.replaceChildren(iframe);
     thumbWrap.style.cursor = "default";
   }, { once: true });
-
   const info = document.createElement("div");
   info.className = "card-info";
-  info.innerHTML = `
-    <div>
-      <h3>${video.title}</h3>
-      <p>${video.category}</p>
-    </div>
-    <span>${String(index + 2).padStart(2, "0")}</span>
-  `;
-
+  info.innerHTML = `<div><h3>${video.title}</h3><p>${video.category}</p></div><span>${String(index + 2).padStart(2, "0")}</span>`;
   card.appendChild(thumbWrap);
   card.appendChild(info);
   grid.appendChild(card);
