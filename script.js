@@ -1,5 +1,4 @@
 const videos = [
-  { title: "Project 01", category: "Event Film • Creative Direction", youtubeId: "p5H_neI8nSA" },
   { title: "Project 02", category: "Event Experience", youtubeId: "7Mjo9ZoQKdk" },
   { title: "Project 03", category: "Brand Activation", youtubeId: "78YeVpyMJgE" },
   { title: "Project 04", category: "Live Event", youtubeId: "o-jr_uCeVGc" },
@@ -14,29 +13,75 @@ const videos = [
   { title: "Project 13", category: "Event Recap", youtubeId: "nSuQSeqH0iI" }
 ];
 
-
 const grid = document.getElementById("videoGrid");
 
-videos.forEach((video, index) => {
-  const card = document.createElement("a");
-  card.className = "card";
-  card.href = `https://youtu.be/${video.youtubeId}`;
-  card.target = "_blank";
-  card.rel = "noopener";
+function thumbnailCandidates(id) {
+  return [
+    `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/sddefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+    `https://i.ytimg.com/vi/${id}/mqdefault.jpg`
+  ];
+}
 
-  card.innerHTML = `
-    <div class="thumb">
-      <img src="https://i.ytimg.com/vi/${video.youtubeId}/maxresdefault.jpg" alt="${video.title}">
-      <div class="play">▶</div>
+videos.forEach((video, index) => {
+  const card = document.createElement("article");
+  card.className = "card";
+
+  const thumbWrap = document.createElement("button");
+  thumbWrap.className = "thumb";
+  thumbWrap.type = "button";
+  thumbWrap.setAttribute("aria-label", `Play ${video.title}`);
+
+  const img = document.createElement("img");
+  img.alt = video.title;
+
+  const sources = thumbnailCandidates(video.youtubeId);
+  let sourceIndex = 0;
+  img.src = sources[sourceIndex];
+  img.onerror = () => {
+    sourceIndex += 1;
+    if (sourceIndex < sources.length) {
+      img.src = sources[sourceIndex];
+    } else {
+      img.style.display = "none";
+      thumbWrap.classList.add("thumb-fallback");
+    }
+  };
+
+  const play = document.createElement("div");
+  play.className = "play";
+  play.textContent = "▶";
+
+  thumbWrap.appendChild(img);
+  thumbWrap.appendChild(play);
+
+  thumbWrap.addEventListener("click", () => {
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1`;
+    iframe.title = video.title;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "0";
+    iframe.style.display = "block";
+
+    thumbWrap.replaceChildren(iframe);
+    thumbWrap.style.cursor = "default";
+  }, { once: true });
+
+  const info = document.createElement("div");
+  info.className = "card-info";
+  info.innerHTML = `
+    <div>
+      <h3>${video.title}</h3>
+      <p>${video.category}</p>
     </div>
-    <div class="card-info">
-      <div>
-        <h3>${video.title}</h3>
-        <p>${video.category}</p>
-      </div>
-      <span>${String(index + 1).padStart(2, "0")}</span>
-    </div>
+    <span>${String(index + 2).padStart(2, "0")}</span>
   `;
 
+  card.appendChild(thumbWrap);
+  card.appendChild(info);
   grid.appendChild(card);
 });
