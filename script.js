@@ -14,6 +14,7 @@ const videos = [
   {id:"aNVfmG6Io88",title:"Project 11",category:"Entertainment Event",thumbnail:"project-11.jpg"},
   {id:"vpmbdMpktXI",title:"Project 12",category:"Brand Experience",thumbnail:"project-12.jpg"},
   {id:"nSuQSeqH0iI",title:"Project 13",category:"Event Recap",thumbnail:"project-13.jpg"},
+
   {id:"4tqC6Hr1R5E",title:"Project 14",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/4tqC6Hr1R5E/hqdefault.jpg"},
   {id:"CfSAYpalJAE",title:"Project 15",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/CfSAYpalJAE/hqdefault.jpg"},
   {id:"1G8XVFR8NeQ",title:"Project 16",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/1G8XVFR8NeQ/hqdefault.jpg"},
@@ -39,24 +40,28 @@ const videos = [
 
 const grid = document.getElementById("videoGrid");
 
-function thumbSrc(v){
-  return v.thumbnail.startsWith("http") ? v.thumbnail : `${BASE}${v.thumbnail}?v=12`;
+function thumbSrc(v) {
+  return v.thumbnail.startsWith("http")
+    ? v.thumbnail
+    : `${BASE}${v.thumbnail}?v=13`;
 }
 
-function stopOtherPlayers(currentCard){
+function stopOtherPlayers(currentCard) {
   document.querySelectorAll(".card.is-playing").forEach(card => {
-    if(card !== currentCard){
+    if (card !== currentCard) {
       const frame = card.querySelector(".video-frame");
-      if(frame) frame.remove();
+      if (frame) frame.remove();
+
       const btn = card.querySelector(".thumb");
-      if(btn) btn.classList.remove("hidden");
+      if (btn) btn.classList.remove("hidden");
+
       card.classList.remove("is-playing");
     }
   });
 }
 
-function playInline(card, button, video){
-  if(card.classList.contains("is-playing")) return;
+function playInline(card, button, video) {
+  if (card.classList.contains("is-playing")) return;
 
   stopOtherPlayers(card);
 
@@ -64,43 +69,163 @@ function playInline(card, button, video){
   frame.className = "video-frame";
 
   const iframe = document.createElement("iframe");
-  iframe.src = `https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1`;
+
+  iframe.src =
+    `https://www.youtube-nocookie.com/embed/${video.id}` +
+    `?autoplay=1&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1`;
+
   iframe.title = video.title;
   iframe.allow = "autoplay; encrypted-media; picture-in-picture";
   iframe.allowFullscreen = true;
 
   frame.appendChild(iframe);
   card.insertBefore(frame, button);
+
   button.classList.add("hidden");
   card.classList.add("is-playing");
 }
 
-videos.forEach((v,i)=>{
-  const card = document.createElement("article");
-  card.className = "card";
+if (grid) {
+  videos.forEach((v, i) => {
+    const card = document.createElement("article");
+    card.className = "card";
 
-  const button = document.createElement("button");
-  button.className = "thumb";
-  button.type = "button";
-  button.setAttribute("aria-label", `Play ${v.title}`);
-  button.oncontextmenu = e => e.preventDefault();
+    const button = document.createElement("button");
+    button.className = "thumb";
+    button.type = "button";
+    button.setAttribute("aria-label", `Play ${v.title}`);
 
-  const img = document.createElement("img");
-  img.src = thumbSrc(v);
-  img.alt = v.title;
-  img.draggable = false;
+    button.oncontextmenu = e => e.preventDefault();
 
-  const play = document.createElement("div");
-  play.className = "play";
-  play.textContent = "▶";
+    const img = document.createElement("img");
+    img.src = thumbSrc(v);
+    img.alt = v.title;
+    img.draggable = false;
 
-  button.append(img, play);
-  button.addEventListener("click", ()=>playInline(card, button, v));
+    const play = document.createElement("div");
+    play.className = "play";
+    play.textContent = "▶";
 
-  const info = document.createElement("div");
-  info.className = "card-info";
-  info.innerHTML = `<div><h3>${v.title}</h3><p>${v.category}</p></div><span>${String(i+1).padStart(2,"0")}</span>`;
+    button.append(img, play);
 
-  card.append(button, info);
-  grid.appendChild(card);
+    button.addEventListener("click", () => {
+      playInline(card, button, v);
+    });
+
+    const info = document.createElement("div");
+    info.className = "card-info";
+
+    info.innerHTML = `
+      <div>
+        <h3>${v.title}</h3>
+        <p>${v.category}</p>
+      </div>
+      <span>${String(i + 1).padStart(2, "0")}</span>
+    `;
+
+    card.append(button, info);
+    grid.appendChild(card);
+  });
+}
+
+
+/* ========================================
+   FEATURED SHOWREEL POPUP
+   ======================================== */
+
+const showreelTrigger =
+  document.getElementById("showreelTrigger");
+
+const showreelModal =
+  document.getElementById("showreelModal");
+
+const showreelModalVideo =
+  document.getElementById("showreelModalVideo");
+
+let lastFocusedElement = null;
+
+
+function openShowreel() {
+
+  if (!showreelModal || !showreelModalVideo) return;
+
+  lastFocusedElement = document.activeElement;
+
+  showreelModalVideo.innerHTML = `
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/A4uoy2StnEY?autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1"
+      title="Cek Artis Portfolio Showreel"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  `;
+
+  showreelModal.classList.add("is-open");
+  showreelModal.setAttribute("aria-hidden", "false");
+
+  document.body.classList.add("modal-open");
+
+  const closeBtn =
+    showreelModal.querySelector(".showreel-modal-close");
+
+  if (closeBtn) closeBtn.focus();
+}
+
+
+function closeShowreel() {
+
+  if (!showreelModal || !showreelModalVideo) return;
+
+  showreelModal.classList.remove("is-open");
+  showreelModal.setAttribute("aria-hidden", "true");
+
+  /* Menghapus iframe juga menghentikan video */
+  showreelModalVideo.innerHTML = "";
+
+  document.body.classList.remove("modal-open");
+
+  if (
+    lastFocusedElement &&
+    typeof lastFocusedElement.focus === "function"
+  ) {
+    lastFocusedElement.focus();
+  }
+}
+
+
+if (showreelTrigger) {
+  showreelTrigger.addEventListener(
+    "click",
+    openShowreel
+  );
+}
+
+
+if (showreelModal) {
+
+  showreelModal
+    .querySelectorAll("[data-showreel-close]")
+    .forEach(element => {
+
+      element.addEventListener(
+        "click",
+        closeShowreel
+      );
+
+    });
+}
+
+
+/* ESC untuk menutup popup */
+
+document.addEventListener("keydown", event => {
+
+  if (
+    event.key === "Escape" &&
+    showreelModal &&
+    showreelModal.classList.contains("is-open")
+  ) {
+    closeShowreel();
+  }
+
 });
