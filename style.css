@@ -303,54 +303,35 @@ select{
   text-align:center;
 
   position:relative;
+  isolation:isolate;
 
   overflow:hidden;
 
-  background:
-    radial-gradient(
-      circle at 50% 47%,
-      rgba(215,255,47,.085),
-      transparent 27%
-    ),
-    linear-gradient(
-      180deg,
-      #0a0a0a 0%,
-      #090909 100%
-    );
+  background:#090909;
 }
 
 
 .hero.hero-text-only::before{
-  content:"CREATIVE";
+  content:"";
 
   position:absolute;
+  inset:0;
 
-  left:50%;
-  top:49%;
+  background:
+    url("hero-event-stage.png")
+    center 38% / cover
+    no-repeat;
 
-  transform:
-    translate(-50%,-50%);
+  transform:scale(1.04);
 
-  font-size:
-    clamp(
-      220px,
-      27vw,
-      540px
-    );
+  filter:
+    blur(7px)
+    brightness(.38)
+    saturate(1.06);
 
-  line-height:.72;
-
-  font-weight:900;
-
-  letter-spacing:-.085em;
-
-  color:
-    rgba(215,255,47,.085);
-
-  white-space:nowrap;
+  transform-origin:center;
 
   pointer-events:none;
-  user-select:none;
 }
 
 
@@ -361,14 +342,17 @@ select{
   inset:0;
 
   background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0,
-      transparent calc(8.333% - 1px),
-      rgba(255,255,255,.032)
-      calc(8.333% - 1px),
-      rgba(255,255,255,.032)
-      8.333%
+    linear-gradient(
+      180deg,
+      rgba(3,3,3,.2) 0%,
+      rgba(3,3,3,.38) 16%,
+      rgba(3,3,3,.58) 45%,
+      rgba(3,3,3,.8) 100%
+    ),
+    radial-gradient(
+      circle at 50% 24%,
+      rgba(215,255,47,.16),
+      transparent 30%
     );
 
   pointer-events:none;
@@ -382,7 +366,7 @@ select{
 
   width:100%;
 
-  max-width:1500px;
+  max-width:1180px;
 
   margin:
     0 auto;
@@ -399,7 +383,7 @@ select{
 
 
 .hero.hero-text-only h1{
-  max-width:1500px;
+  max-width:1120px;
 
   margin:0 auto;
 
@@ -417,6 +401,9 @@ select{
   letter-spacing:-.068em;
 
   text-transform:uppercase;
+
+  text-shadow:
+    0 10px 34px rgba(0,0,0,.42);
 }
 
 
@@ -448,6 +435,9 @@ select{
   color:#f2f2f2;
 
   font-weight:650;
+
+  text-shadow:
+    0 8px 26px rgba(0,0,0,.48);
 }
 
 
@@ -462,6 +452,9 @@ select{
   font-size:17px;
 
   line-height:1.55;
+
+  text-shadow:
+    0 6px 20px rgba(0,0,0,.42);
 }
 
 
@@ -1697,6 +1690,15 @@ body.modal-open{
 @media
 (max-width:1200px){
 
+  .hero.hero-text-only{
+  }
+
+
+  .hero.hero-text-only::before{
+    background-position:
+      center 34%;
+  }
+
   .nav{
     grid-template-columns:
       minmax(235px,1fr)
@@ -1892,47 +1894,54 @@ body.modal-open{
       calc(100svh - 66px);
 
     padding:
-      72px 16px
-      64px;
+      78px 16px
+      72px;
 
-    text-align:left;
+    text-align:center;
 
     align-items:center;
+
   }
 
 
   .hero.hero-text-only::before{
-    left:-12px;
+    background-position:
+      58% center;
 
-    top:52%;
+    transform:scale(1.08);
 
-    transform:
-      translateY(-50%);
+    filter:
+      blur(8px)
+      brightness(.34)
+      saturate(1.04);
+  }
 
-    font-size:42vw;
 
-    opacity:.8;
+  .hero.hero-text-only::before{
   }
 
 
   .hero.hero-text-only::after{
     background:
-      repeating-linear-gradient(
-        90deg,
-        transparent 0,
-        transparent calc(25% - 1px),
-        rgba(255,255,255,.025)
-        calc(25% - 1px),
-        rgba(255,255,255,.025)
-        25%
+      linear-gradient(
+        180deg,
+        rgba(3,3,3,.28) 0%,
+        rgba(3,3,3,.56) 22%,
+        rgba(3,3,3,.76) 58%,
+        rgba(3,3,3,.88) 100%
+      ),
+      radial-gradient(
+        circle at 50% 18%,
+        rgba(215,255,47,.14),
+        transparent 30%
       );
   }
 
 
   .hero-copy{
-    max-width:100%;
+    max-width:640px;
 
-    margin:0;
+    margin:0 auto;
   }
 
 
@@ -1947,7 +1956,7 @@ body.modal-open{
 
 
   .hero.hero-text-only h1{
-    margin:0;
+    margin:0 auto;
 
     font-size:
       clamp(
@@ -1969,9 +1978,9 @@ body.modal-open{
 
   .hero.hero-text-only h2{
     margin:
-      23px 0 0;
+      23px auto 0;
 
-    max-width:100%;
+    max-width:30rem;
 
     font-size:17px;
 
@@ -1982,9 +1991,9 @@ body.modal-open{
   .hero.hero-text-only
   .lead{
     margin:
-      14px 0 0;
+      14px auto 0;
 
-    max-width:100%;
+    max-width:32rem;
 
     font-size:14px;
 
@@ -2465,6 +2474,11 @@ body.modal-open{
 
 @media
 (max-width:430px){
+
+  .hero.hero-text-only::before{
+    background-position:
+      60% center;
+  }
 
   .brand-tagline{
     max-width:78px;
