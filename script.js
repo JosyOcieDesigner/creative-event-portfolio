@@ -1030,3 +1030,409 @@ document.addEventListener("keydown", event => {
   }
 
 })();
+/* ==========================================================
+   REFERENCE SHOWREEL LAYOUT
+   Add this at the VERY BOTTOM of script.js
+   ========================================================== */
+
+(function () {
+
+  function buildReferenceShowreel() {
+
+    const section = document.querySelector("#showreel");
+    if (!section) return;
+
+    const shell = section.querySelector(".showreel-shell");
+    const copy = section.querySelector(".showreel-copy");
+    const art = section.querySelector(".showreel-art");
+    const scene = section.querySelector(".showreel-object-scene");
+    const stats = section.querySelector(".showreel-stats");
+
+    if (!shell || !copy || !art || !scene || !stats) return;
+
+    /* ------------------------------------------------------
+       LEFT SIDE
+       ------------------------------------------------------ */
+
+    const eyebrow = copy.querySelector(".eyebrow");
+    const heading = copy.querySelector("h2");
+    const lead = copy.querySelector(".showreel-lead");
+    const trigger = copy.querySelector(".showreel-trigger");
+
+    if (eyebrow) {
+      eyebrow.textContent = "WHO WE ARE";
+    }
+
+    if (heading) {
+      heading.innerHTML =
+        'CREATIVITY<br>MEETS<br><span>STRATEGY.</span>';
+    }
+
+    if (lead) {
+      lead.textContent =
+        "We combine creative thinking with a strong production mindset—building work that is visually engaging, strategically relevant, and executable in the real world.";
+    }
+
+    if (trigger) {
+
+      trigger.innerHTML = `
+        <span class="showreel-play">▶</span>
+        <span>WATCH OUR SHOWREEL</span>
+        <span aria-hidden="true">↗</span>
+      `;
+
+    }
+
+
+    /* ------------------------------------------------------
+       CENTER — FEATURED PROJECT
+       ------------------------------------------------------ */
+
+    if (!scene.querySelector(".featured-project-label")) {
+
+      const label = document.createElement("div");
+
+      label.className =
+        "featured-project-label";
+
+      label.textContent =
+        "FEATURED PROJECT";
+
+      scene.appendChild(label);
+
+    }
+
+
+    /* REAL MP4 CUBE */
+
+    if (!scene.querySelector(".reference-cube-video")) {
+
+      const video =
+        document.createElement("video");
+
+      video.className =
+        "reference-cube-video";
+
+      video.src =
+        "cube-loop.mp4";
+
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+
+      video.setAttribute(
+        "autoplay",
+        ""
+      );
+
+      video.setAttribute(
+        "loop",
+        ""
+      );
+
+      video.setAttribute(
+        "muted",
+        ""
+      );
+
+      video.setAttribute(
+        "playsinline",
+        ""
+      );
+
+      video.setAttribute(
+        "preload",
+        "auto"
+      );
+
+      scene.appendChild(video);
+
+
+      /*
+       Safari sometimes needs play()
+       after DOM insertion.
+      */
+
+      const startVideo = () => {
+
+        const playPromise =
+          video.play();
+
+        if (
+          playPromise &&
+          typeof playPromise.catch === "function"
+        ) {
+
+          playPromise.catch(() => {});
+
+        }
+
+      };
+
+      video.addEventListener(
+        "canplay",
+        startVideo,
+        { once:true }
+      );
+
+      startVideo();
+
+    }
+
+
+    /* bottom tagline */
+
+    if (!scene.querySelector(".reference-project-tagline")) {
+
+      const tagline =
+        document.createElement("div");
+
+      tagline.className =
+        "reference-project-tagline";
+
+      tagline.innerHTML =
+        "IDEA <b>•</b> PLAN <b>•</b> CREATE <b>•</b> IMPACT";
+
+      scene.appendChild(tagline);
+
+    }
+
+
+    /* ------------------------------------------------------
+       RIGHT SIDE — SERVICES
+       ------------------------------------------------------ */
+
+    let services =
+      shell.querySelector(".reference-services");
+
+    if (!services) {
+
+      services =
+        document.createElement("div");
+
+      services.className =
+        "reference-services";
+
+
+      services.innerHTML = `
+
+        <article class="reference-service-card">
+
+          <div
+            class="reference-service-icon"
+            aria-hidden="true"
+          >
+            ◎
+          </div>
+
+          <h3>
+            BRAND BUILDING<br>
+            &amp; STRATEGY
+          </h3>
+
+          <p>
+            Concept development, positioning,
+            narrative, and campaign direction.
+          </p>
+
+        </article>
+
+
+        <article class="reference-service-card">
+
+          <div
+            class="reference-service-icon"
+            aria-hidden="true"
+          >
+            ♧
+          </div>
+
+          <h3>
+            CREATIVE DIGITAL<br>
+            SOLUTION
+          </h3>
+
+          <p>
+            Content, visual communication,
+            digital activation, and audience
+            experience.
+          </p>
+
+        </article>
+
+
+        <article class="reference-service-card">
+
+          <div
+            class="reference-service-icon"
+            aria-hidden="true"
+          >
+            ▷
+          </div>
+
+          <h3>
+            EVENT &amp; CAMPAIGN<br>
+            PRODUCTION
+          </h3>
+
+          <p>
+            Planning, creative direction,
+            execution, and documentation.
+          </p>
+
+        </article>
+
+      `;
+
+
+      /*
+       Insert directly after center artwork.
+       CSS grid then positions it on the right.
+      */
+
+      art.insertAdjacentElement(
+        "afterend",
+        services
+      );
+
+    }
+
+
+    /* ------------------------------------------------------
+       STATS
+       ------------------------------------------------------ */
+
+    const statItems =
+      stats.querySelectorAll(":scope > div");
+
+    const statData = [
+
+      {
+        number:"100+",
+        label:"EVENTS PRODUCED"
+      },
+
+      {
+        number:"50+",
+        label:"BRANDS TRUSTED"
+      },
+
+      {
+        number:"15+",
+        label:"YEARS OF EXPERIENCE"
+      },
+
+      {
+        number:"1",
+        label:"VISION : IMPACT"
+      }
+
+    ];
+
+
+    statItems.forEach(
+      (item,index) => {
+
+        if (!statData[index]) return;
+
+        const strong =
+          item.querySelector("strong");
+
+        const span =
+          item.querySelector("span");
+
+        if (strong) {
+          strong.textContent =
+            statData[index].number;
+        }
+
+        if (span) {
+          span.textContent =
+            statData[index].label;
+        }
+
+      }
+    );
+
+
+    /* ------------------------------------------------------
+       REMOVE DUPLICATE ABOUT SECTION
+       ------------------------------------------------------
+
+       Reference already includes WHO WE ARE inside showreel.
+       We hide the old About section so it isn't repeated.
+       Navigation #about will point to this new section.
+       ------------------------------------------------------ */
+
+    const oldAbout =
+      document.querySelector("#about");
+
+    if (oldAbout) {
+
+      oldAbout.style.display =
+        "none";
+
+    }
+
+
+    /*
+     Give this section the About anchor without
+     breaking the existing showreel ID.
+    */
+
+    if (!document.querySelector("#reference-about-anchor")) {
+
+      const anchor =
+        document.createElement("span");
+
+      anchor.id =
+        "reference-about-anchor";
+
+      anchor.style.position =
+        "absolute";
+
+      anchor.style.top =
+        "-90px";
+
+      section.prepend(anchor);
+
+    }
+
+
+    /*
+     Redirect About Us nav link
+     to this section.
+    */
+
+    document
+      .querySelectorAll('a[href="#about"]')
+      .forEach(link => {
+
+        link.setAttribute(
+          "href",
+          "#showreel"
+        );
+
+      });
+
+  }
+
+
+  if (
+    document.readyState ===
+    "loading"
+  ) {
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      buildReferenceShowreel
+    );
+
+  } else {
+
+    buildReferenceShowreel();
+
+  }
+
+})();
