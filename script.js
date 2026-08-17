@@ -106,7 +106,11 @@ if (grid) {
     play.className = "play";
     play.textContent = "▶";
 
-    button.append(img, play);
+  button.append(img);
+
+if (!v.hidePlay) {
+  button.append(play);
+}
 
     button.addEventListener("click", () => {
       playInline(card, button, v);
