@@ -3591,7 +3591,801 @@ body.modal-open{
     left:26px;
   }
 }
+/* ==========================================================
+   CREATIVE JOURNEY SECTION
+   Add this at the VERY BOTTOM of style.css
+   ========================================================== */
 
+#creativeJourney{
+  --journey-lime:#d7ff00;
+  --journey-bg:#050505;
+  --journey-line:rgba(215,255,0,.82);
+  --journey-text:#f5f5f5;
+  --journey-muted:#d0d0d0;
+
+  position:relative;
+
+  width:100%;
+
+  padding:
+    64px 3.1vw
+    72px;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 12%,
+      rgba(215,255,0,.035),
+      transparent 20%
+    ),
+    #050505;
+
+  color:var(--journey-text);
+}
+
+
+/* decorative background */
+
+#creativeJourney::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(215,255,0,.018) 48%,
+      transparent 100%
+    );
+
+  opacity:.75;
+}
+
+
+#creativeJourney .journey-shell{
+  position:relative;
+
+  z-index:2;
+
+  width:100%;
+
+  max-width:1840px;
+
+  margin:0 auto;
+}
+
+
+/* ==========================================================
+   TOP AREA
+   ========================================================== */
+
+#creativeJourney .journey-top{
+  position:relative;
+
+  display:grid;
+
+  grid-template-columns:
+    minmax(390px,.9fr)
+    minmax(700px,1.7fr);
+
+  min-height:520px;
+
+  overflow:hidden;
+
+  border-radius:0;
+}
+
+
+/* left copy */
+
+#creativeJourney .journey-copy{
+  position:relative;
+
+  z-index:3;
+
+  padding:
+    22px 28px
+    40px 10px;
+
+  align-self:start;
+}
+
+
+#creativeJourney .journey-eyebrow{
+  margin:0 0 24px;
+
+  color:var(--journey-lime);
+
+  font-size:14px;
+
+  font-weight:900;
+
+  letter-spacing:.02em;
+
+  text-transform:uppercase;
+}
+
+
+#creativeJourney .journey-title{
+  margin:0;
+
+  max-width:640px;
+
+  color:#f5f5f5;
+
+  font-family:
+    Impact,
+    Haettenschweiler,
+    "Arial Narrow Bold",
+    "Arial Narrow",
+    sans-serif;
+
+  font-size:
+    clamp(
+      58px,
+      4.7vw,
+      92px
+    );
+
+  line-height:.93;
+
+  font-weight:900;
+
+  letter-spacing:-.025em;
+
+  text-transform:uppercase;
+}
+
+
+#creativeJourney .journey-title span{
+  color:var(--journey-lime);
+}
+
+
+#creativeJourney .journey-intro{
+  margin:
+    25px 0 0;
+
+  max-width:520px;
+
+  color:#f0f0f0;
+
+  font-size:17px;
+
+  line-height:1.65;
+
+  font-weight:400;
+}
+
+
+/* right image */
+
+#creativeJourney .journey-image{
+  position:relative;
+
+  min-height:520px;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #050505 0%,
+      rgba(5,5,5,.78) 7%,
+      rgba(5,5,5,.18) 24%,
+      rgba(5,5,5,.08) 100%
+    ),
+    url("project-03.jpg")
+    center 42% / cover
+    no-repeat;
+
+  filter:
+    grayscale(1)
+    contrast(1.08)
+    brightness(.68);
+}
+
+
+#creativeJourney .journey-image::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05) 0%,
+      rgba(0,0,0,.22) 54%,
+      rgba(5,5,5,.92) 100%
+    );
+
+  pointer-events:none;
+}
+
+
+#creativeJourney .journey-image::after{
+  content:"+";
+
+  position:absolute;
+
+  right:30px;
+
+  top:22px;
+
+  color:rgba(255,255,255,.5);
+
+  font-size:22px;
+}
+
+
+/* ==========================================================
+   FLOW AREA
+   ========================================================== */
+
+#creativeJourney .journey-flow{
+  position:relative;
+
+  margin-top:-116px;
+
+  z-index:6;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap:0;
+}
+
+
+#creativeJourney .journey-step{
+  position:relative;
+
+  min-height:350px;
+
+  padding:
+    0 28px
+    20px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+  border-right:
+    1px dotted rgba(215,255,0,.23);
+}
+
+
+#creativeJourney .journey-step:last-child{
+  border-right:0;
+}
+
+
+/* large number */
+
+#creativeJourney .journey-number{
+  margin:
+    0 0 16px;
+
+  color:transparent;
+
+  -webkit-text-stroke:
+    1px rgba(215,255,0,.86);
+
+  font-size:
+    clamp(
+      62px,
+      5vw,
+      92px
+    );
+
+  line-height:1;
+
+  font-weight:800;
+
+  letter-spacing:-.03em;
+}
+
+
+/* node */
+
+#creativeJourney .journey-node{
+  position:relative;
+
+  width:100%;
+
+  height:38px;
+
+  margin-bottom:22px;
+}
+
+
+#creativeJourney .journey-node::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  right:0;
+
+  top:50%;
+
+  height:2px;
+
+  transform:
+    translateY(-50%);
+
+  background:
+    var(--journey-line);
+
+  box-shadow:
+    0 0 10px
+    rgba(215,255,0,.18);
+}
+
+
+#creativeJourney .journey-step:first-child
+.journey-node::before{
+  left:20%;
+}
+
+
+#creativeJourney .journey-step:last-child
+.journey-node::before{
+  right:18%;
+}
+
+
+#creativeJourney .journey-dot{
+  position:absolute;
+
+  left:50%;
+
+  top:50%;
+
+  width:26px;
+
+  height:26px;
+
+  transform:
+    translate(-50%,-50%);
+
+  border-radius:50%;
+
+  border:
+    2px solid rgba(215,255,0,.78);
+
+  background:#111;
+
+  box-shadow:
+    0 0 0 8px
+    rgba(215,255,0,.055);
+}
+
+
+#creativeJourney .journey-dot::after{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+
+  top:50%;
+
+  width:11px;
+
+  height:11px;
+
+  transform:
+    translate(-50%,-50%);
+
+  border-radius:50%;
+
+  background:
+    var(--journey-lime);
+}
+
+
+/* step content */
+
+#creativeJourney .journey-step h3{
+  margin:
+    0 0 10px;
+
+  width:100%;
+
+  color:var(--journey-lime);
+
+  font-size:17px;
+
+  line-height:1.15;
+
+  font-weight:900;
+
+  text-align:center;
+
+  text-transform:uppercase;
+}
+
+
+#creativeJourney .journey-step p{
+  margin:
+    0 auto;
+
+  max-width:220px;
+
+  color:#e4e4e4;
+
+  font-size:14px;
+
+  line-height:1.55;
+
+  text-align:center;
+}
+
+
+/* icons */
+
+#creativeJourney .journey-icon{
+  width:72px;
+
+  height:72px;
+
+  margin:
+    24px auto 0;
+
+  display:grid;
+
+  place-items:center;
+
+  border:
+    1px solid rgba(215,255,0,.4);
+
+  border-radius:14px;
+
+  color:var(--journey-lime);
+
+  font-size:38px;
+
+  line-height:1;
+
+  background:
+    rgba(7,7,7,.7);
+
+  box-shadow:
+    inset 0 0 0 6px
+    rgba(215,255,0,.015);
+}
+
+
+/* ==========================================================
+   BOTTOM CTA PANEL
+   ========================================================== */
+
+#creativeJourney .journey-bottom{
+  margin-top:34px;
+
+  min-height:150px;
+
+  padding:
+    24px 42px;
+
+  display:grid;
+
+  grid-template-columns:
+    minmax(300px,.8fr)
+    minmax(600px,1.6fr);
+
+  align-items:center;
+
+  gap:34px;
+
+  overflow:hidden;
+
+  border:
+    1px solid rgba(255,255,255,.2);
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(10,10,10,.96),
+      rgba(6,6,6,.99)
+    );
+
+  position:relative;
+}
+
+
+#creativeJourney .journey-bottom::before{
+  content:"";
+
+  position:absolute;
+
+  left:28px;
+
+  top:28px;
+
+  width:85px;
+
+  height:85px;
+
+  border-left:
+    1px solid rgba(215,255,0,.5);
+
+  border-top:
+    1px solid rgba(215,255,0,.5);
+
+  opacity:.8;
+}
+
+
+#creativeJourney .journey-bottom::after{
+  content:"+";
+
+  position:absolute;
+
+  right:54px;
+
+  top:26px;
+
+  color:
+    var(--journey-lime);
+
+  font-size:28px;
+}
+
+
+#creativeJourney .journey-bottom-image{
+  height:100px;
+
+  border-radius:12px;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.6),
+      rgba(0,0,0,.05)
+    ),
+    url("project-05.jpg")
+    center 58% / cover
+    no-repeat;
+
+  filter:
+    grayscale(1)
+    brightness(.7)
+    contrast(1.12);
+}
+
+
+#creativeJourney .journey-bottom-copy{
+  position:relative;
+
+  z-index:3;
+}
+
+
+#creativeJourney .journey-bottom-copy h3{
+  margin:0;
+
+  color:#f6f6f6;
+
+  font-size:
+    clamp(
+      30px,
+      2.6vw,
+      54px
+    );
+
+  line-height:1;
+
+  font-weight:900;
+
+  letter-spacing:-.025em;
+
+  text-transform:uppercase;
+}
+
+
+#creativeJourney .journey-bottom-copy h3 span{
+  display:block;
+
+  margin-top:7px;
+
+  color:var(--journey-lime);
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width:1100px){
+
+  #creativeJourney{
+    padding:
+      54px 4vw
+      60px;
+  }
+
+
+  #creativeJourney .journey-top{
+    grid-template-columns:1fr;
+
+    min-height:0;
+  }
+
+
+  #creativeJourney .journey-copy{
+    padding:
+      0 0 34px;
+  }
+
+
+  #creativeJourney .journey-title{
+    max-width:800px;
+  }
+
+
+  #creativeJourney .journey-image{
+    min-height:480px;
+
+    background-position:
+      center 38%;
+  }
+
+
+  #creativeJourney .journey-flow{
+    margin-top:-65px;
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+    row-gap:28px;
+  }
+
+
+  #creativeJourney .journey-step{
+    min-height:320px;
+
+    border-right:0;
+
+    border-bottom:
+      1px dotted rgba(215,255,0,.18);
+  }
+
+
+  #creativeJourney .journey-step:last-child{
+    grid-column:
+      1 / -1;
+  }
+
+
+  #creativeJourney .journey-bottom{
+    grid-template-columns:
+      1fr 1.5fr;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width:700px){
+
+  #creativeJourney{
+    padding:
+      42px 18px
+      48px;
+  }
+
+
+  #creativeJourney .journey-eyebrow{
+    margin-bottom:16px;
+
+    font-size:11px;
+  }
+
+
+  #creativeJourney .journey-title{
+    font-size:
+      clamp(
+        46px,
+        15vw,
+        70px
+      );
+  }
+
+
+  #creativeJourney .journey-intro{
+    font-size:15px;
+  }
+
+
+  #creativeJourney .journey-image{
+    min-height:330px;
+  }
+
+
+  #creativeJourney .journey-flow{
+    margin-top:-25px;
+
+    grid-template-columns:1fr;
+  }
+
+
+  #creativeJourney .journey-step{
+    min-height:0;
+
+    padding:
+      0 0
+      34px;
+
+    margin-bottom:26px;
+
+    border-bottom:
+      1px dotted rgba(215,255,0,.2);
+  }
+
+
+  #creativeJourney .journey-number{
+    font-size:62px;
+  }
+
+
+  #creativeJourney .journey-node{
+    margin-bottom:18px;
+  }
+
+
+  #creativeJourney .journey-step p{
+    max-width:320px;
+  }
+
+
+  #creativeJourney .journey-bottom{
+    grid-template-columns:1fr;
+
+    min-height:0;
+
+    padding:
+      22px;
+
+    gap:22px;
+  }
+
+
+  #creativeJourney .journey-bottom-image{
+    height:130px;
+  }
+
+
+  #creativeJourney .journey-bottom-copy h3{
+    font-size:
+      clamp(
+        28px,
+        9vw,
+        42px
+      );
+  }
+
+}
 
 /* ==========================================================
    TABLET
