@@ -114,9 +114,6 @@ if (!v.hidePlay) {
 button.addEventListener("click", () => {
   playInline(card, button, v);
 });
-    iframe.src =
-  `https://www.youtube-nocookie.com/embed/${video.id}` +
-  `?autoplay=1&controls=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1`;
 
     const info = document.createElement("div");
     info.className = "card-info";
