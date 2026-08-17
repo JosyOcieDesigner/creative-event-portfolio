@@ -529,11 +529,11 @@ select{
   display:grid;
 
   grid-template-columns:
-    .9fr
-    1.1fr;
+    1fr
+    1.25fr;
 
   gap:
-    36px 64px;
+    32px 48px;
 
   overflow:hidden;
 
@@ -602,10 +602,10 @@ select{
   display:grid;
 
   grid-template-columns:
-    minmax(300px,420px)
-    minmax(250px,1fr);
+    minmax(300px,430px)
+    minmax(220px,1fr);
 
-  gap:40px;
+  gap:28px;
 
   align-items:start;
 }
@@ -641,8 +641,8 @@ select{
 .showreel-copy-side{
   max-width:300px;
 
-  padding-top:74px;
-  padding-left:26px;
+  padding-top:56px;
+  padding-left:12px;
 }
 
 
@@ -739,7 +739,7 @@ select{
 
   z-index:2;
 
-  min-height:520px;
+  min-height:540px;
 
   display:grid;
 
@@ -752,7 +752,7 @@ select{
 
   width:100%;
 
-  min-height:520px;
+  min-height:540px;
 
   aspect-ratio:
     16 / 10;
@@ -1034,14 +1034,14 @@ select{
   left:50%;
   top:50%;
 
-  width:46%;
-  max-width:300px;
+  width:54%;
+  max-width:340px;
   min-width:220px;
 
   aspect-ratio:1;
 
   transform:
-    translate(-4%,-46%);
+    translate(-50%,-50%);
 
   perspective:1200px;
 }
