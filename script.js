@@ -43,7 +43,7 @@ const grid = document.getElementById("videoGrid");
 function thumbSrc(v) {
   return v.thumbnail.startsWith("http")
     ? v.thumbnail
-    : `${BASE}${v.thumbnail}?v=13`;
+   : `${BASE}${v.thumbnail}?v=14`;
 }
 
 function stopOtherPlayers(currentCard) {
