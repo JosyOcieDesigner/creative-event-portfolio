@@ -176,8 +176,6 @@
 
         <div class="showreel-scene-grid"></div>
 
-        <div class="showreel-halo"></div>
-
         <div class="showreel-orbit showreel-orbit-one"></div>
         <div class="showreel-orbit showreel-orbit-two"></div>
         <div class="showreel-orbit showreel-orbit-three"></div>
@@ -190,14 +188,16 @@
         <div class="showreel-line showreel-line-two"></div>
 
         <div class="showreel-cube-wrap">
-          <div class="showreel-cube">
-            <span class="face face-front"></span>
-            <span class="face face-back"></span>
-            <span class="face face-right"></span>
-            <span class="face face-left"></span>
-            <span class="face face-top"></span>
-            <span class="face face-bottom"></span>
-          </div>
+          <video
+            class="showreel-cube-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+          >
+            <source src="cube-loop.mp4" type="video/mp4">
+          </video>
         </div>
 
       </div>
