@@ -114,7 +114,15 @@ if (!v.hidePlay) {
 button.addEventListener("click", () => {
   playInline(card, button, v);
 });
+card.addEventListener("mouseleave", () => {
+  if (!card.classList.contains("is-playing")) return;
 
+  const frame = card.querySelector(".video-frame");
+  if (frame) frame.remove();
+
+  button.classList.remove("hidden");
+  card.classList.remove("is-playing");
+});
     const info = document.createElement("div");
     info.className = "card-info";
 
