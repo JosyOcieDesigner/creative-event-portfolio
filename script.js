@@ -1,7 +1,7 @@
 const BASE = "/creative-event-portfolio/";
 
 const videos = [
- {id:"p5H_neI8nSA",title:"Creative Event",category:"Creative Direction • Event Experience",thumbnail:"project-01..png",hidePlay:true},
+ {id:"p5H_neI8nSA",title:"Creative Event",category:"Creative Direction • Event Experience",thumbnail:"project-01.png",hidePlay:true},
   {id:"7Mjo9ZoQKdk",title:"Project 02",category:"Event Experience",thumbnail:"project-02.jpg"},
   {id:"78YeVpyMJgE",title:"Project 03",category:"Brand Activation",thumbnail:"project-03.jpg"},
   {id:"o-jr_uCeVGc",title:"Project 04",category:"Live Event",thumbnail:"project-04.jpg"},
