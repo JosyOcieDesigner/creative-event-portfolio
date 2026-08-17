@@ -1436,3 +1436,281 @@ document.addEventListener("keydown", event => {
   }
 
 })();
+Creative Journey versi final
+/* ==========================================================
+   CREATIVE JOURNEY — CLEAN FINAL VERSION
+   ========================================================== */
+
+(function () {
+
+  function buildCreativeJourney() {
+
+    const existing = document.querySelector("#creativeJourney");
+
+    if (existing) {
+      existing.remove();
+    }
+
+    const showreel = document.querySelector("#showreel");
+
+    if (!showreel) return;
+
+
+    const journey = document.createElement("section");
+
+    journey.id = "creativeJourney";
+
+
+    journey.innerHTML = `
+
+      <div class="journey-shell">
+
+
+        <div class="journey-top">
+
+
+          <div class="journey-copy">
+
+            <p class="journey-eyebrow">
+              → &nbsp; OUR CREATIVE JOURNEY
+            </p>
+
+
+            <h2 class="journey-title">
+
+              WE DON'T JUST
+              <br>
+
+              CREATE EVENTS.
+
+              <br>
+
+              <span>
+                WE DESIGN EXPERIENCES
+                <br>
+                PEOPLE REMEMBER.
+              </span>
+
+            </h2>
+
+
+            <p class="journey-intro">
+
+              Every project starts with an insight,
+              becomes an idea, and evolves into an
+              experience built to connect brands
+              with real people.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="journey-image"
+            aria-hidden="true"
+          ></div>
+
+
+        </div>
+
+
+
+        <div class="journey-flow">
+
+
+          <article class="journey-step">
+
+            <div class="journey-number">
+              01
+            </div>
+
+            <div class="journey-node">
+              <span class="journey-dot"></span>
+            </div>
+
+            <h3>
+              INSIGHT
+            </h3>
+
+            <p>
+              We explore audience, culture,
+              and market data to uncover
+              meaningful opportunities.
+            </p>
+
+            <div class="journey-icon">
+              ◉
+            </div>
+
+          </article>
+
+
+
+          <article class="journey-step">
+
+            <div class="journey-number">
+              02
+            </div>
+
+            <div class="journey-node">
+              <span class="journey-dot"></span>
+            </div>
+
+            <h3>
+              BIG IDEA
+            </h3>
+
+            <p>
+              We turn insight into a powerful
+              creative idea that has relevance
+              and emotional impact.
+            </p>
+
+            <div class="journey-icon">
+              ♧
+            </div>
+
+          </article>
+
+
+
+          <article class="journey-step">
+
+            <div class="journey-number">
+              03
+            </div>
+
+            <div class="journey-node">
+              <span class="journey-dot"></span>
+            </div>
+
+            <h3>
+              EXPERIENCE DESIGN
+            </h3>
+
+            <p>
+              We design the experience journey,
+              touchpoints, and interactions
+              that engage and inspire.
+            </p>
+
+            <div class="journey-icon">
+              ✎
+            </div>
+
+          </article>
+
+
+
+          <article class="journey-step">
+
+            <div class="journey-number">
+              04
+            </div>
+
+            <div class="journey-node">
+              <span class="journey-dot"></span>
+            </div>
+
+            <h3>
+              EXECUTION
+            </h3>
+
+            <p>
+              We bring the idea to life with
+              precise planning, production,
+              and flawless execution.
+            </p>
+
+            <div class="journey-icon">
+              ⚙
+            </div>
+
+          </article>
+
+
+
+          <article class="journey-step">
+
+            <div class="journey-number">
+              05
+            </div>
+
+            <div class="journey-node">
+              <span class="journey-dot"></span>
+            </div>
+
+            <h3>
+              IMPACT
+            </h3>
+
+            <p>
+              We measure results, audience
+              response, and long-term impact
+              for real growth.
+            </p>
+
+            <div class="journey-icon">
+              ◎
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+
+        <div class="journey-bottom">
+
+
+          <div
+            class="journey-bottom-image"
+            aria-hidden="true"
+          ></div>
+
+
+          <div class="journey-bottom-copy">
+
+            <h3>
+              IDEAS ARE ONLY THE BEGINNING.
+
+              <span>
+                WE MAKE THEM HAPPEN.
+              </span>
+            </h3>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    `;
+
+
+    showreel.insertAdjacentElement(
+      "afterend",
+      journey
+    );
+
+  }
+
+
+  if (document.readyState === "loading") {
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      buildCreativeJourney
+    );
+
+  } else {
+
+    buildCreativeJourney();
+
+  }
+
+})();
