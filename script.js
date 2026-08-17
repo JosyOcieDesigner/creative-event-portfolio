@@ -1436,7 +1436,7 @@ document.addEventListener("keydown", event => {
   }
 
 })();
-Creative Journey versi final
+
 /* ==========================================================
    CREATIVE JOURNEY — CLEAN FINAL VERSION
    ========================================================== */
