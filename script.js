@@ -976,7 +976,45 @@ document.addEventListener("keydown", event => {
             class="journey-bottom-image"
             aria-hidden="true"
           ></div>
+/* ==========================================================
+   CREATIVE JOURNEY BOTTOM CLEANUP
+   ========================================================== */
 
+(function () {
+
+  function cleanJourneyBottomImage() {
+
+    const bottomImage =
+      document.querySelector(
+        "#creativeJourney .journey-bottom-image"
+      );
+
+    if (!bottomImage) return;
+
+    bottomImage.innerHTML = "";
+
+    bottomImage
+      .querySelectorAll(
+        "button, .play, .showreel-play, svg"
+      )
+      .forEach(el => el.remove());
+
+  }
+
+  if (document.readyState === "loading") {
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      cleanJourneyBottomImage
+    );
+
+  } else {
+
+    cleanJourneyBottomImage();
+
+  }
+
+})();
 
           <div class="journey-bottom-copy">
 
