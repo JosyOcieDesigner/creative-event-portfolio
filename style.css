@@ -6346,3 +6346,52 @@ body.modal-open{
   }
 
 }
+/* ==========================================================
+   FULL WIDTH SECTION ALIGNMENT
+   Match Selected Works horizontal composition
+   ========================================================== */
+
+/* CREATIVITY MEETS STRATEGY */
+.showreel-design{
+  padding-left:0;
+  padding-right:0;
+}
+
+.showreel-shell{
+  width:calc(100% - 8vw);
+  max-width:none;
+  margin-left:4vw;
+  margin-right:4vw;
+}
+
+
+/* WE DON'T JUST CREATE EVENTS */
+#creativeJourney{
+  width:100%;
+  padding-left:4vw;
+  padding-right:4vw;
+}
+
+#creativeJourney .journey-shell{
+  width:100%;
+  max-width:none;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+/* keep both sections safe on mobile */
+@media (max-width:768px){
+
+  .showreel-shell{
+    width:calc(100% - 32px);
+    margin-left:16px;
+    margin-right:16px;
+  }
+
+  #creativeJourney{
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+}
