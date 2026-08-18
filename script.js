@@ -1,16 +1,76 @@
 const BASE = "/creative-event-portfolio/";
 
 const videos = [
- {id:"p5H_neI8nSA",title:"Creative Event",category:"Creative Direction • Event Experience",thumbnail:"project-01.png",hidePlay:true},
-  {id:"7Mjo9ZoQKdk",title:"Project 02",category:"Event Experience",thumbnail:"project-02.jpg"},
-  {id:"78YeVpyMJgE",title:"Project 03",category:"Brand Activation",thumbnail:"project-03.jpg"},
-  {id:"o-jr_uCeVGc",title:"Project 04",category:"Live Event",thumbnail:"project-04.jpg"},
-  {id:"SZuYLtXobTw",title:"Project 05",category:"Campaign Experience",thumbnail:"project-05.jpg"},
-  {id:"RYHhRRq4vmk",title:"Project 06",category:"Event Production",thumbnail:"project-06.jpg"},
-  {id:"Ysb_F_TWdBM",title:"Project 07",category:"Creative Direction",thumbnail:"project-07.jpg"},
-  {id:"ztzvE9rnH9U",title:"Project 08",category:"Event Documentation",thumbnail:"project-08.jpg"},
-  {id:"6i2qeBiPmrM",title:"Project 09",category:"Corporate Event",thumbnail:"project-09.jpg"},
-  {id:"bmD3KTpkQu8",title:"Project 10",category:"Product Launch",thumbnail:"project-10.jpg"},
+  {
+    id:"p5H_neI8nSA",
+    title:"Creative Event",
+    category:"Creative Direction • Event Experience",
+    thumbnail:"project-01.png",
+    hidePlay:true
+  },
+
+  {
+    id:"7Mjo9ZoQKdk",
+    title:"Project 02",
+    category:"Event Experience",
+    thumbnail:"project-02.png"
+  },
+
+  {
+    id:"78YeVpyMJgE",
+    title:"Project 03",
+    category:"Brand Activation",
+    thumbnail:"project-03.png"
+  },
+
+  {
+    id:"o-jr_uCeVGc",
+    title:"Project 04",
+    category:"Live Event",
+    thumbnail:"project-04.png"
+  },
+
+  {
+    id:"SZuYLtXobTw",
+    title:"Project 05",
+    category:"Campaign Experience",
+    thumbnail:"project-05.png"
+  },
+
+  {
+    id:"RYHhRRq4vmk",
+    title:"Project 06",
+    category:"Event Production",
+    thumbnail:"project-06.png"
+  },
+
+  {
+    id:"Ysb_F_TWdBM",
+    title:"Project 07",
+    category:"Creative Direction",
+    thumbnail:"project-07.png"
+  },
+
+  {
+    id:"ztzvE9rnH9U",
+    title:"Project 08",
+    category:"Event Documentation",
+    thumbnail:"project-08.png"
+  },
+
+  {
+    id:"6i2qeBiPmrM",
+    title:"Project 09",
+    category:"Corporate Event",
+    thumbnail:"project-09.png"
+  },
+
+  {
+    id:"bmD3KTpkQu8",
+    title:"Project 10",
+    category:"Product Launch",
+    thumbnail:"project-10.png"
+  },
   {id:"aNVfmG6Io88",title:"Project 11",category:"Entertainment Event",thumbnail:"project-11.jpg"},
   {id:"vpmbdMpktXI",title:"Project 12",category:"Brand Experience",thumbnail:"project-12.jpg"},
   {id:"nSuQSeqH0iI",title:"Project 13",category:"Event Recap",thumbnail:"project-13.jpg"},
