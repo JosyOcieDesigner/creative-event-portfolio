@@ -13,63 +13,72 @@ const videos = [
     id:"7Mjo9ZoQKdk",
     title:"Project 02",
     category:"Event Experience",
-    thumbnail:"project-02.png"
+    thumbnail:"project-02.png",
+    hidePlay:true
   },
 
   {
     id:"78YeVpyMJgE",
     title:"Project 03",
     category:"Brand Activation",
-    thumbnail:"project-03.png"
+    thumbnail:"project-03.png",
+    hidePlay:true
   },
 
   {
     id:"o-jr_uCeVGc",
     title:"Project 04",
     category:"Live Event",
-    thumbnail:"project-04.png"
+    thumbnail:"project-04.png",
+    hidePlay:true
   },
 
   {
     id:"SZuYLtXobTw",
     title:"Project 05",
     category:"Campaign Experience",
-    thumbnail:"project-05.png"
+    thumbnail:"project-05.png",
+    hidePlay:true
   },
 
   {
     id:"RYHhRRq4vmk",
     title:"Project 06",
     category:"Event Production",
-    thumbnail:"project-06.png"
+    thumbnail:"project-06.png",
+    hidePlay:true
   },
 
   {
     id:"Ysb_F_TWdBM",
     title:"Project 07",
     category:"Creative Direction",
-    thumbnail:"project-07.png"
+    thumbnail:"project-07.png",
+    hidePlay:true
   },
 
   {
     id:"ztzvE9rnH9U",
     title:"Project 08",
     category:"Event Documentation",
-    thumbnail:"project-08.png"
+    thumbnail:"project-08.png",
+    hidePlay:true
   },
 
   {
     id:"6i2qeBiPmrM",
     title:"Project 09",
     category:"Corporate Event",
-    thumbnail:"project-09.png"
+    thumbnail:"project-09.png",
+    hidePlay:true
   },
 
   {
     id:"bmD3KTpkQu8",
     title:"Project 10",
     category:"Product Launch",
-    thumbnail:"project-10.png"
+    thumbnail:"project-10.png",
+    hidePlay:true
   },
   {id:"aNVfmG6Io88",title:"Project 11",category:"Entertainment Event",thumbnail:"project-11.jpg"},
   {id:"vpmbdMpktXI",title:"Project 12",category:"Brand Experience",thumbnail:"project-12.jpg"},
