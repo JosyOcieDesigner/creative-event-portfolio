@@ -237,10 +237,12 @@ const videos = [
     id:"kc7d9YxAAeM",
     title:"Project 30",
     category:"Creative Event",
-    thumbnail:"project-30.png",
-    hidePlay:true
-   {
-    id:"CEhWNUVJiB8",
+   thumbnail:"project-30.png",
+hidePlay:true
+},
+
+{
+  id:"CEhWNUVJiB8",
     title:"Project 31",
     category:"Creative Event",
     thumbnail:"https://i.ytimg.com/vi/CEhWNUVJiB8/hqdefault.jpg"
