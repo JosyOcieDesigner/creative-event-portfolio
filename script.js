@@ -243,89 +243,99 @@ hidePlay:true
 
 {
   id:"CEhWNUVJiB8",
-    title:"Project 31",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/CEhWNUVJiB8/hqdefault.jpg"
-  },
+  title:"Project 31",
+  category:"Creative Event",
+  thumbnail:"project-31.png",
+  hidePlay:true
+},
 
-  {
-    id:"n_zRjZcywXM",
-    title:"Project 32",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/n_zRjZcywXM/hqdefault.jpg"
-  },
+{
+  id:"n_zRjZcywXM",
+  title:"Project 32",
+  category:"Creative Event",
+  thumbnail:"project-32.png",
+  hidePlay:true
+},
 
-  {
-    id:"oUe9WBMy-Is",
-    title:"Project 33",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/oUe9WBMy-Is/hqdefault.jpg"
-  },
+{
+  id:"oUe9WBMy-Is",
+  title:"Project 33",
+  category:"Creative Event",
+  thumbnail:"project-33.png",
+  hidePlay:true
+},
 
-  {
-    id:"cQAOSfosogE",
-    title:"Project 34",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/cQAOSfosogE/hqdefault.jpg"
-  },
+{
+  id:"cQAOSfosogE",
+  title:"Project 34",
+  category:"Creative Event",
+  thumbnail:"project-34.png",
+  hidePlay:true
+},
 
-  {
-    id:"E2PQuEoaRgg",
-    title:"Project 35",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/E2PQuEoaRgg/hqdefault.jpg"
-  },
+{
+  id:"E2PQuEoaRgg",
+  title:"Project 35",
+  category:"Creative Event",
+  thumbnail:"project-35.png",
+  hidePlay:true
+},
 
-  {
-    id:"Kr1njc5bDb8",
-    title:"Project 36",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/Kr1njc5bDb8/hqdefault.jpg"
-  },
+{
+  id:"Kr1njc5bDb8",
+  title:"Project 36",
+  category:"Creative Event",
+  thumbnail:"project-36.png",
+  hidePlay:true
+},
 
-  {
-    id:"E1cNRHAcHfw",
-    title:"Project 37",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/E1cNRHAcHfw/hqdefault.jpg"
-  },
+{
+  id:"E1cNRHAcHfw",
+  title:"Project 37",
+  category:"Creative Event",
+  thumbnail:"project-37.png",
+  hidePlay:true
+},
 
-  {
-    id:"fytjaZ4skac",
-    title:"Project 38",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/fytjaZ4skac/hqdefault.jpg"
-  },
+{
+  id:"fytjaZ4skac",
+  title:"Project 38",
+  category:"Creative Event",
+  thumbnail:"project-38.png",
+  hidePlay:true
+},
 
-  {
-    id:"Iuh_6cuiazc",
-    title:"Project 39",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/Iuh_6cuiazc/hqdefault.jpg"
-  },
+{
+  id:"Iuh_6cuiazc",
+  title:"Project 39",
+  category:"Creative Event",
+  thumbnail:"project-39.png",
+  hidePlay:true
+},
 
-  
-   {
+{
   id:"JS_ngll75OA",
   title:"Project 40",
   category:"Creative Event",
-  thumbnail:"https://i.ytimg.com/vi/JS_ngll75OA/hqdefault.jpg"
+  thumbnail:"project-40.png",
+  hidePlay:true
 },
 
 {
   id:"B4fUzJI2VRM",
-    title:"Project 41",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/B4fUzJI2VRM/hqdefault.jpg"
-  },
+  title:"Project 41",
+  category:"Creative Event",
+  thumbnail:"project-41.png",
+  hidePlay:true
+},
 
-  {
-    id:"V1hNhzusDok",
-    title:"Project 42",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/V1hNhzusDok/hqdefault.jpg"
-  }
-];
+{
+  id:"V1hNhzusDok",
+  title:"Project 42",
+  category:"Creative Event",
+  thumbnail:"project-42.png",
+  hidePlay:true
+}
 
 const grid = document.getElementById("videoGrid");
 
