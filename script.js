@@ -337,8 +337,9 @@ hidePlay:true
   hidePlay:true
 }
 
-const grid = document.getElementById("videoGrid");
+];
 
+const grid = document.getElementById("videoGrid");
 function thumbSrc(v) {
   return v.thumbnail.startsWith("http")
     ? v.thumbnail
