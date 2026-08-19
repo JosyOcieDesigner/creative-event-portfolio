@@ -6428,3 +6428,473 @@ body.modal-open{
   display:block;
   border:0;
 }
+/* ==================================================
+   OUR CLIENT SECTION
+================================================== */
+
+.clients-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 58% 45%,
+      rgba(35, 35, 35, 0.2),
+      transparent 38%
+    ),
+    #050505;
+
+  color: #ffffff;
+  padding: 130px 5vw 120px;
+  box-sizing: border-box;
+}
+
+.clients-container {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1540px;
+  min-height: 650px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 29% 71%;
+  align-items: center;
+  gap: 45px;
+}
+
+
+/* ==================================================
+   LEFT CONTENT
+================================================== */
+
+.clients-intro {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.clients-eyebrow {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  margin-bottom: 26px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+
+  color: #d7ff00;
+}
+
+.eyebrow-line {
+  position: relative;
+
+  width: 125px;
+  max-width: 38%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #d7ff00,
+    #9cff00
+  );
+}
+
+.eyebrow-dot {
+  position: absolute;
+  right: -5px;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  transform: translateY(-50%);
+
+  background: #d7ff00;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 7px #d7ff00,
+    0 0 15px rgba(215, 255, 0, 0.65);
+}
+
+
+.clients-title {
+  margin: 0 0 18px;
+
+  font-family:
+    "Arial Narrow",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(62px, 6.7vw, 112px);
+  line-height: 0.88;
+  letter-spacing: -4px;
+  font-weight: 900;
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+
+.clients-description {
+  max-width: 400px;
+
+  margin: 20px 0 48px;
+
+  font-size: 19px;
+  line-height: 1.8;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+.clients-button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 42px;
+
+  min-width: 230px;
+
+  padding: 0 0 14px;
+
+  border: none;
+  border-bottom: 2px solid #d7ff00;
+
+  background: transparent;
+
+  color: #d7ff00;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    gap 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.clients-button:hover {
+  gap: 52px;
+}
+
+.clients-arrow {
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+
+/* ==================================================
+   CLIENT LOGO GRID
+================================================== */
+
+.clients-logos {
+  position: relative;
+  z-index: 4;
+
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(6, minmax(90px, 1fr));
+
+  align-items: center;
+  justify-items: center;
+
+  column-gap: 26px;
+  row-gap: 47px;
+}
+
+.client-logo {
+  width: 100%;
+  height: 84px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.client-logo img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 76px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: brightness(0.94);
+}
+
+.client-logo:hover {
+  transform: translateY(-5px) scale(1.04);
+}
+
+.client-logo:hover img {
+  filter: brightness(1.1);
+}
+
+
+/*
+Buat beberapa logo panjang mengambil ruang lebih besar
+*/
+
+.client-logo-wide {
+  grid-column: span 1;
+}
+
+.client-logo-wide img {
+  max-width: 170px;
+}
+
+
+/* ==================================================
+   CORNER DETAILS
+================================================== */
+
+.client-corner {
+  position: absolute;
+
+  width: 55px;
+  height: 55px;
+
+  z-index: 2;
+
+  opacity: 0.75;
+}
+
+.client-corner-tl {
+  top: 85px;
+  left: 30px;
+
+  border-top: 2px solid rgba(255,255,255,0.7);
+  border-left: 2px solid rgba(255,255,255,0.7);
+}
+
+.client-corner-br {
+  right: 38px;
+  bottom: 70px;
+
+  border-right: 2px solid rgba(255,255,255,0.7);
+  border-bottom: 2px solid rgba(255,255,255,0.7);
+}
+
+
+/* ==================================================
+   NEON DOTS
+================================================== */
+
+.client-dots {
+  position: absolute;
+
+  width: 230px;
+  height: 165px;
+
+  z-index: 1;
+
+  opacity: 0.65;
+
+  background-image:
+    radial-gradient(
+      circle,
+      #cfff00 1.3px,
+      transparent 1.7px
+    );
+
+  background-size: 22px 22px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black,
+      transparent
+    );
+}
+
+.client-dots-top {
+  top: 35px;
+  right: -20px;
+}
+
+.client-dots-bottom {
+  left: -10px;
+  bottom: 20px;
+
+  transform: rotate(180deg);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1180px) {
+
+  .clients-section {
+    padding:
+      110px 45px
+      105px;
+  }
+
+  .clients-container {
+    grid-template-columns:
+      34% 66%;
+
+    gap: 35px;
+  }
+
+  .clients-logos {
+    grid-template-columns:
+      repeat(4, 1fr);
+
+    column-gap: 25px;
+    row-gap: 38px;
+  }
+
+  .client-logo-wide {
+    grid-column: span 1;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 760px) {
+
+  .clients-section {
+    padding:
+      90px 24px
+      80px;
+  }
+
+  .clients-container {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 75px;
+  }
+
+  .clients-title {
+    font-size: clamp(60px, 18vw, 90px);
+
+    letter-spacing: -3px;
+  }
+
+  .clients-description {
+    font-size: 17px;
+    line-height: 1.7;
+
+    max-width: 100%;
+  }
+
+  .clients-eyebrow {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+
+  .eyebrow-line {
+    flex: 1;
+
+    max-width: 120px;
+  }
+
+  .clients-button {
+    min-width: 220px;
+  }
+
+  .clients-logos {
+    grid-template-columns:
+      repeat(2, minmax(120px, 1fr));
+
+    column-gap: 28px;
+    row-gap: 38px;
+  }
+
+  .client-logo {
+    height: 76px;
+  }
+
+  .client-logo img {
+    max-height: 67px;
+  }
+
+  .client-logo-wide img {
+    max-width: 145px;
+  }
+
+  .client-corner {
+    width: 36px;
+    height: 36px;
+  }
+
+  .client-corner-tl {
+    left: 18px;
+    top: 34px;
+  }
+
+  .client-corner-br {
+    right: 18px;
+    bottom: 35px;
+  }
+
+  .client-dots {
+    width: 170px;
+    height: 140px;
+
+    background-size:
+      19px 19px;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 430px) {
+
+  .clients-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .clients-logos {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 31px 20px;
+  }
+
+  .client-logo img {
+    max-width: 135px;
+  }
+
+}
