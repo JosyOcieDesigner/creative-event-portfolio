@@ -239,11 +239,75 @@ const videos = [
     category:"Creative Event",
     thumbnail:"project-30.png",
     hidePlay:true
+   {
+    id:"CEhWNUVJiB8",
+    title:"Project 31",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/CEhWNUVJiB8/hqdefault.jpg"
   },
-  {id:"CEhWNUVJiB8",title:"Project 31",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/CEhWNUVJiB8/hqdefault.jpg"},
-  {id:"n_zRjZcywXM",title:"Project 32",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/n_zRjZcywXM/hqdefault.jpg"},
-  {id:"oUe9WBMy-Is",title:"Project 33",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/oUe9WBMy-Is/hqdefault.jpg"},
-  {id:"cQAOSfosogE",title:"Project 34",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/cQAOSfosogE/hqdefault.jpg"}
+
+  {
+    id:"n_zRjZcywXM",
+    title:"Project 32",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/n_zRjZcywXM/hqdefault.jpg"
+  },
+
+  {
+    id:"oUe9WBMy-Is",
+    title:"Project 33",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/oUe9WBMy-Is/hqdefault.jpg"
+  },
+
+  {
+    id:"cQAOSfosogE",
+    title:"Project 34",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/cQAOSfosogE/hqdefault.jpg"
+  },
+
+  {
+    id:"E2PQuEoaRgg",
+    title:"Project 35",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/E2PQuEoaRgg/hqdefault.jpg"
+  },
+
+  {
+    id:"Kr1njc5bDb8",
+    title:"Project 36",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/Kr1njc5bDb8/hqdefault.jpg"
+  },
+
+  {
+    id:"E1cNRHAcHfw",
+    title:"Project 37",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/E1cNRHAcHfw/hqdefault.jpg"
+  },
+
+  {
+    id:"fytjaZ4skac",
+    title:"Project 38",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/fytjaZ4skac/hqdefault.jpg"
+  },
+
+  {
+    id:"Iuh_6cuiazc",
+    title:"Project 39",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/Iuh_6cuiazc/hqdefault.jpg"
+  },
+
+  {
+    id:"JS_ngll75OA",
+    title:"Project 40",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/JS_ngll75OA/hqdefault.jpg"
+  }
 ];
 
 const grid = document.getElementById("videoGrid");
