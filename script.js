@@ -153,13 +153,16 @@ const videos = [
     hidePlay:true
   },
 
-  {
+   {
     id:"qIE1wK0Zf2o",
     title:"Project 20",
     category:"Creative Event",
     thumbnail:"project-20.png",
     hidePlay:true
-   {
+  },
+
+  {
+    id:"Qbv4WrXNDXM",
     id:"Qbv4WrXNDXM",
     title:"Project 21",
     category:"Creative Event",
