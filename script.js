@@ -251,7 +251,7 @@ const grid = document.getElementById("videoGrid");
 function thumbSrc(v) {
   return v.thumbnail.startsWith("http")
     ? v.thumbnail
-    : `${BASE}${v.thumbnail}?v=20260819-1`;
+    : `${BASE}${v.thumbnail}?v=20260819-2`;
 }
 
 function stopOtherPlayers(currentCard) {
