@@ -6914,3 +6914,7 @@ Buat beberapa logo panjang mengambil ruang lebih besar
 .client-logo img[src="prasetiya-mulya.png"] {
   transform: scale(1.35);
 }
+/* Resize Telkom Indonesia */
+.client-logo img[src="telkom-indonesia.png"] {
+  transform: scale(1.5);
+}
