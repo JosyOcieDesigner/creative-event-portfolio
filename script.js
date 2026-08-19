@@ -73,24 +73,93 @@ const videos = [
     hidePlay:true
   },
 
-  {
+    {
     id:"bmD3KTpkQu8",
     title:"Project 10",
     category:"Product Launch",
     thumbnail:"project-10.png",
     hidePlay:true
   },
-  {id:"aNVfmG6Io88",title:"Project 11",category:"Entertainment Event",thumbnail:"project-11.jpg"},
-  {id:"vpmbdMpktXI",title:"Project 12",category:"Brand Experience",thumbnail:"project-12.jpg"},
-  {id:"nSuQSeqH0iI",title:"Project 13",category:"Event Recap",thumbnail:"project-13.jpg"},
 
-  {id:"4tqC6Hr1R5E",title:"Project 14",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/4tqC6Hr1R5E/hqdefault.jpg"},
-  {id:"CfSAYpalJAE",title:"Project 15",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/CfSAYpalJAE/hqdefault.jpg"},
-  {id:"1G8XVFR8NeQ",title:"Project 16",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/1G8XVFR8NeQ/hqdefault.jpg"},
-  {id:"x93EqiUeD6c",title:"Project 17",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/x93EqiUeD6c/hqdefault.jpg"},
-  {id:"v7SNZDYfVOQ",title:"Project 18",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/v7SNZDYfVOQ/hqdefault.jpg"},
-  {id:"a6JZUictggw",title:"Project 19",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/a6JZUictggw/hqdefault.jpg"},
-  {id:"qIE1wK0Zf2o",title:"Project 20",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/qIE1wK0Zf2o/hqdefault.jpg"},
+  {
+    id:"aNVfmG6Io88",
+    title:"Project 11",
+    category:"Entertainment Event",
+    thumbnail:"project-11.png",
+    hidePlay:true
+  },
+
+  {
+    id:"vpmbdMpktXI",
+    title:"Project 12",
+    category:"Brand Experience",
+    thumbnail:"project-12.png",
+    hidePlay:true
+  },
+
+  {
+    id:"nSuQSeqH0iI",
+    title:"Project 13",
+    category:"Event Recap",
+    thumbnail:"project-13.png",
+    hidePlay:true
+  },
+
+  {
+    id:"4tqC6Hr1R5E",
+    title:"Project 14",
+    category:"Creative Event",
+    thumbnail:"project-14.png",
+    hidePlay:true
+  },
+
+  {
+    id:"CfSAYpalJAE",
+    title:"Project 15",
+    category:"Creative Event",
+    thumbnail:"project-15.png",
+    hidePlay:true
+  },
+
+  {
+    id:"1G8XVFR8NeQ",
+    title:"Project 16",
+    category:"Creative Event",
+    thumbnail:"project-16.png",
+    hidePlay:true
+  },
+
+  {
+    id:"x93EqiUeD6c",
+    title:"Project 17",
+    category:"Creative Event",
+    thumbnail:"project-17.png",
+    hidePlay:true
+  },
+
+  {
+    id:"v7SNZDYfVOQ",
+    title:"Project 18",
+    category:"Creative Event",
+    thumbnail:"project-18.png",
+    hidePlay:true
+  },
+
+  {
+    id:"a6JZUictggw",
+    title:"Project 19",
+    category:"Creative Event",
+    thumbnail:"project-19.png",
+    hidePlay:true
+  },
+
+  {
+    id:"qIE1wK0Zf2o",
+    title:"Project 20",
+    category:"Creative Event",
+    thumbnail:"project-20.png",
+    hidePlay:true
+  },
   {id:"Qbv4WrXNDXM",title:"Project 21",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/Qbv4WrXNDXM/hqdefault.jpg"},
   {id:"kVx6Bget3Wk",title:"Project 22",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/kVx6Bget3Wk/hqdefault.jpg"},
   {id:"Ww2o08iwjF4",title:"Project 23",category:"Creative Event",thumbnail:"https://i.ytimg.com/vi/Ww2o08iwjF4/hqdefault.jpg"},
