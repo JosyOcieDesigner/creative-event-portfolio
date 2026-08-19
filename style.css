@@ -6906,3 +6906,11 @@ Buat beberapa logo panjang mengambil ruang lebih besar
 .client-logo img[src="prasetiya-mulya.png"] {
   transform: scale(1.35);
 }
+/* Resize Telkomsel & Prasetiya Mulya */
+.client-logo img[src="telkomsel.png"] {
+  transform: scale(1.35);
+}
+
+.client-logo img[src="prasetiya-mulya.png"] {
+  transform: scale(1.35);
+}
