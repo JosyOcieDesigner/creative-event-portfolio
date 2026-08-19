@@ -310,6 +310,19 @@ hidePlay:true
     category:"Creative Event",
     thumbnail:"https://i.ytimg.com/vi/JS_ngll75OA/hqdefault.jpg"
   }
+  {
+    id:"B4fUzJI2VRM",
+    title:"Project 41",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/B4fUzJI2VRM/hqdefault.jpg"
+  },
+
+  {
+    id:"V1hNhzusDok",
+    title:"Project 42",
+    category:"Creative Event",
+    thumbnail:"https://i.ytimg.com/vi/V1hNhzusDok/hqdefault.jpg"
+  }
 ];
 
 const grid = document.getElementById("videoGrid");
