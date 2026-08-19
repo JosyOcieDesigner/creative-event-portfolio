@@ -305,13 +305,15 @@ hidePlay:true
   },
 
   {
-    id:"JS_ngll75OA",
-    title:"Project 40",
-    category:"Creative Event",
-    thumbnail:"https://i.ytimg.com/vi/JS_ngll75OA/hqdefault.jpg"
-  }
-  {
-    id:"B4fUzJI2VRM",
+   {
+  id:"JS_ngll75OA",
+  title:"Project 40",
+  category:"Creative Event",
+  thumbnail:"https://i.ytimg.com/vi/JS_ngll75OA/hqdefault.jpg"
+},
+
+{
+  id:"B4fUzJI2VRM",
     title:"Project 41",
     category:"Creative Event",
     thumbnail:"https://i.ytimg.com/vi/B4fUzJI2VRM/hqdefault.jpg"
