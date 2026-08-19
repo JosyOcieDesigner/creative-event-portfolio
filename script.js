@@ -162,13 +162,12 @@ const videos = [
   },
 
   {
-    id:"Qbv4WrXNDXM",
-    id:"Qbv4WrXNDXM",
-    title:"Project 21",
-    category:"Creative Event",
-    thumbnail:"project-21.png",
-    hidePlay:true
-  },
+  id:"Qbv4WrXNDXM",
+  title:"Project 21",
+  category:"Creative Event",
+  thumbnail:"project-21.png",
+  hidePlay:true
+},
 
   {
     id:"kVx6Bget3Wk",
