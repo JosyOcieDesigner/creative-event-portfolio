@@ -7099,3 +7099,70 @@ Buat beberapa logo panjang mengambil ruang lebih besar
     }
 
 }
+/* ==================================================
+   MOBILE ONLY — JOURNEY / EXPERIENCE SECTION
+   ================================================== */
+
+@media (max-width: 768px) {
+
+  /* Judul utama:
+     WE DON'T JUST CREATE EVENTS...
+  */
+  .journey-title,
+  .experience-title,
+  .journey-heading,
+  .journey-section h2 {
+    font-size: 34px !important;
+    line-height: 1.05 !important;
+    margin-bottom: 28px !important;
+  }
+
+  /* Nomor 01 - 05 */
+  .journey-step-number,
+  .journey-number,
+  .step-number {
+    font-size: 74px !important;
+    line-height: 1 !important;
+  }
+
+  /* Judul per step:
+     INSIGHT / BIG IDEA / EXPERIENCE DESIGN / dst
+  */
+  .journey-step h3,
+  .journey-item h3,
+  .journey-card h3,
+  .step-content h3 {
+    font-size: 26px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* Deskripsi per step */
+  .journey-step p,
+  .journey-item p,
+  .journey-card p,
+  .step-content p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Icon */
+  .journey-step-icon,
+  .journey-icon,
+  .step-icon {
+    transform: scale(1.18) !important;
+    margin-top: 24px !important;
+  }
+
+  /* Tambah ruang antar step */
+  .journey-step,
+  .journey-item,
+  .journey-card {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+  }
+
+}
