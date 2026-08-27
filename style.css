@@ -6938,3 +6938,25 @@ Buat beberapa logo panjang mengambil ruang lebih besar
     padding-top: 20px !important;
     margin-top: 0 !important;
 }
+/* =========================================
+   COMPACT CLIENT → SELECTED WORKS
+   ========================================= */
+
+/* Paksa section client mengikuti isi konten */
+.clients-section,
+.our-clients,
+#clients {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Hilangkan ruang kosong sebelum portfolio */
+.selected-work,
+.selected-work-section,
+#work,
+#projects {
+    margin-top: 0 !important;
+    padding-top: 45px !important;
+}
