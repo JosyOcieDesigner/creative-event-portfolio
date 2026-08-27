@@ -7242,3 +7242,55 @@ Buat beberapa logo panjang mengambil ruang lebih besar
   }
 
 }
+/* =========================================
+   FINAL MOBILE JOURNEY
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* Judul utama */
+  #creativeJourney .journey-title {
+    font-size: 42px !important;
+    line-height: 0.95 !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* Setiap step 01–05 */
+  #creativeJourney .journey-step {
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Nomor 01–05 */
+  #creativeJourney .journey-number {
+    font-size: 82px !important;
+    line-height: 0.9 !important;
+  }
+
+  /* INSIGHT / BIG IDEA / dst */
+  #creativeJourney .journey-step h3 {
+    font-size: 27px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+  }
+
+  /* Deskripsi */
+  #creativeJourney .journey-step p {
+    font-size: 20px !important;
+    line-height: 1.55 !important;
+    max-width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  /* Icon/node */
+  #creativeJourney .journey-node {
+    transform: scale(1.15) !important;
+    margin-top: 26px !important;
+    margin-bottom: 22px !important;
+  }
+
+}
