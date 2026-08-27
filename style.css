@@ -6918,3 +6918,23 @@ Buat beberapa logo panjang mengambil ruang lebih besar
 .client-logo img[src="telkom-indonesia.png"] {
   transform: scale(1.5);
 }
+/* =========================================
+   FIX SPACING: OUR CLIENTS → SELECTED WORK
+   ========================================= */
+
+/* Reduce bottom space after Our Clients */
+.clients-section,
+.our-clients,
+#clients {
+    padding-bottom: 20px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Reduce top space before Selected Work */
+.selected-work,
+.selected-work-section,
+#work,
+#projects {
+    padding-top: 20px !important;
+    margin-top: 0 !important;
+}
