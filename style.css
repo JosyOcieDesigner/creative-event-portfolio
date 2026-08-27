@@ -6960,3 +6960,30 @@ Buat beberapa logo panjang mengambil ruang lebih besar
     margin-top: 0 !important;
     padding-top: 45px !important;
 }
+/* CENTER TEXT + HIDE IMAGE */
+
+.journey-bottom img {
+    display: none !important;
+}
+
+.journey-bottom-copy {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.journey-bottom-copy h3 {
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.journey-bottom-copy h3 span {
+    display: block !important;
+}
+
+.journey-bottom {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 0 !important;
+}
