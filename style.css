@@ -6987,3 +6987,59 @@ Buat beberapa logo panjang mengambil ruang lebih besar
     padding-bottom: 20px !important;
     margin-bottom: 0 !important;
 }
+/* ==================================================
+   FIX: JOURNEY BANNER + CLIENT SECTION
+   ================================================== */
+
+/* Hilangkan gambar stage di dalam banner */
+.journey-bottom img,
+.journey-bottom-image,
+.journey-bottom-visual,
+.journey-bottom-media {
+    display: none !important;
+}
+
+/* Banner dibuat lebih compact */
+.journey-bottom {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 auto 40px !important;
+}
+
+/* Center tulisan */
+.journey-bottom-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    margin: 0 auto !important;
+    padding: 30px 70px !important;
+    text-align: center !important;
+}
+
+/* Headline center */
+.journey-bottom-copy h3 {
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+/* WE MAKE THEM HAPPEN tetap baris kedua */
+.journey-bottom-copy h3 span {
+    display: block !important;
+    text-align: center !important;
+}
+
+/* Pangkas ruang kosong menuju OUR CLIENT */
+.clients-section,
+.our-clients,
+#clients {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+}
